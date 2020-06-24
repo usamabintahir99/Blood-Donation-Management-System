@@ -1,0 +1,53 @@
+<html>
+<head><title>Sign Up</title>
+<script type="text/javascript">
+function validate()
+{
+var password=signup.password.value;
+var cpassword=signup.cpassword.value;
+if(password!=cpassword)
+{
+alert("Password and Confirm Password does not match");
+signup.cpassword.focus();
+return false;
+}
+}
+</script>
+</head>
+<body>
+<h1>Sign Up</h1>
+<form action="signup" method="post" name="signup" onsubmit="return validate()">
+<fieldset>
+Name:<input type ="text" name = "name" required><br><br>
+Gender:<input type="radio" name="gender" value="Male" required>Male
+        <input type="radio" name="gender" value="Female" required>Female<br><br>
+Age:<input type ="number" name = "age" required><br><br>
+
+Blood Group:<select name="bloodgroup">
+<option value="A+">A+
+<option value="A-">A-
+<option value="B+">B+
+<option value="B+">B+
+<option value="B-">B-
+<option value="AB+">AB+
+<option value="AB-">AB-
+<option value="O+">O+
+<option value="O-">O-
+</select><br><br>
+
+City:<input type ="text" name = "city" required><br><br>
+Phone Number:<input type ="tel" name = "phone" required><br><br>
+Email:<input type ="email" name = "email" required><br><br>
+Password:<input type ="password" name = "password" required><br><br>
+Confirm Password:<input type ="password" name = "cpassword" required><br><br>
+Security Questions (In case you forgot your password):<br><br>
+Q1: What was your childhood nickname?
+<input type ="text" name = "sq1" required><br><br>
+Q2: What is your favoruite color?
+<input type ="text" name = "sq2" required><br><br>
+<input type="submit" value="Sign Up">
+<input type="reset" value="Clear">
+
+</form>
+</body>
+</html>
